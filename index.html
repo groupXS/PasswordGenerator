@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
 <!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
@@ -88,5 +89,143 @@ $ git checkout gh-pages
   </div>
 
   
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : FirstBase 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140404
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#"><img src="images/logo.png" alt="" class="image image-full" /></a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="index.html">Generator</a></li>
+				<li><a href="impressum.html">Impressum</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+<div id="banner-wrapper">
+	<div id="banner" class="container">	
+
+<script language="JavaScript" type="text/javascript">
+
+
+function verifyInput()
+{
+     if (!document.forms[0].elements[3].checked && !document.forms[0].elements[4].checked && !document.forms[0].elements[5].checked) 
+     {
+          alert('You need to choose the type of characters you want in your password');
+          return 0;
+     }
+     if(document.forms[0].elements[6].value=="")
+     {
+          alert('You must enter the desired length for your password');
+          return 0;
+     }
+}
+
+
+function getRandomNum(lbound, ubound)
+{
+     return (Math.floor(Math.random() * (ubound - lbound)) + lbound);
+}
+
+function getRandomChar(withyz, withoutyz, zahlen, extra) 
+{
+     var withyzChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+     var withoutyzChars = "abcdefghijklmnopqrstuvwxABCDEFGHIJKLMNOPQRSTUVWX";
+     var zahlenChars = "1234567890";
+     var charSet = extra;
+
+     if (withyz == true) charSet += withyzChars;
+     if (withoutyz == true) charSet += withoutyzChars;
+     if (zahlen == true) charSet += zahlenChars;
+
+     return charSet.charAt(getRandomNum(0, charSet.length));
+}
+
+function getPassword(length, extraChars, firstWithyz, firstWithoutyz, firstZahlen, latterWithyz, latterWithoutyz, latterZahlen) 
+{
+     var pass = "";
+     length++;
+
+     if (length > 0) pass = pass + getRandomChar(firstWithyz, firstWithoutyz, firstZahlen, extraChars);
+
+     for (var idx = 1; idx < length; ++idx) 
+     {
+          pass = pass + getRandomChar(latterWithyz, latterWithoutyz, latterZahlen, extraChars);
+     }
+     return pass;
+}
+</script>
+
+
+
+
+<div class="generator">
+<div class="heading">Passwortgenerator</div><br>
+<form name="myform">
+<input type=hidden name=firstWithyz><input type=hidden name=firstWithoutyz><input type=hidden name=firstZahlen>
+
+<p style="font:bold 8pt arial;">
+<input type=checkbox checked name=latterWithyz>Mit YZ
+<input type=checkbox name=latterWithoutyz>Ohne YZ
+<input type=checkbox checked name=latterZahlen>Zahlen
+
+<p style="font:bold 8pt arial">Passwortl&auml;nge:
+<input type=text name=passwordLength size=3 value="8">  
+
+<p style="font:bold 8pt arial">Sonderzeichen:  
+<input type=text name=extraChars value="!#$%&'()*+,-./:;<=>?@[]\^_~{}" size=20> 
+
+<p style="font:bold 8pt arial;">Passwort:   
+<input type=text name=password size=25>
+
+<br>
+<div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="verifyInput(); document.myform.password.value =
+getPassword(document.myform.passwordLength.value, document.myform.extraChars.value,
+document.myform.firstWithyz.checked, document.myform.firstWithoutyz.checked, document.myform.firstZahlen.checked,
+document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked);">generieren</div>
+</form>
+</div>
+</div>
+
+
+<div class="text">
+<div class="heading">
+BESCHREIBUNG
+</div>
+<div class="beschreibung_text">
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+</div>
+</div>
+</div>
+>>>>>>> origin/master
 </body>
 </html>
