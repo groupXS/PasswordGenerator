@@ -31,8 +31,8 @@ Released   : 20140404
 		</div>
 		<div id="menu">
 			<ul>
-				<li class="active"><a href="index.html">Generator</a></li>
-				<li><a href="impressum.html">Impressum</a></li>
+				<li class="active"><a href="#" accesskey="1" title="">Generator</a></li>
+				<li><a href="#" accesskey="2" title="">Impressum</a></li>
 			</ul>
 		</div>
 	</div>
@@ -102,24 +102,27 @@ function getPassword(length, extraChars, firstWithyz, firstWithoutyz, firstZahle
 <input type=hidden name=firstWithyz><input type=hidden name=firstWithoutyz><input type=hidden name=firstZahlen>
 
 <p style="font:bold 8pt arial;">
-<input type=checkbox checked name=latterWithyz>Mit YZ
+<input type=checkbox name=latterWithyz>Mit YZ
 <input type=checkbox name=latterWithoutyz>Ohne YZ
-<input type=checkbox checked name=latterZahlen>Zahlen
+<input type=checkbox name=latterZahlen>Zahlen
+
+<p style="font:bold 8pt arial">Sonderzeichen:  
+<input type=text name=extraChars value="!^$%&/()=?'*" size=30> 
 
 <p style="font:bold 8pt arial">Passwortl&auml;nge:
 <input type=text name=passwordLength size=3 value="8">  
 
-<p style="font:bold 8pt arial">Sonderzeichen:  
-<input type=text name=extraChars value="!#$%&'()*+,-./:;<=>?@[]\^_~{}" size=20> 
-
 <p style="font:bold 8pt arial;">Passwort:   
 <input type=text name=password size=25>
 
+<center>
 <br>
-<div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="verifyInput(); document.myform.password.value =
+<br>
+<input type=button value="Passwort generieren" style="cursor:hand" onClick="verifyInput(); document.myform.password.value =
 getPassword(document.myform.passwordLength.value, document.myform.extraChars.value,
 document.myform.firstWithyz.checked, document.myform.firstWithoutyz.checked, document.myform.firstZahlen.checked,
-document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked);">generieren</div>
+document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked);">
+</center>
 </form>
 </div>
 </div>
