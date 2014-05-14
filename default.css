@@ -437,10 +437,11 @@
 	#banner .button
 	{
 		margin-top: 2em;
-		padding: 1.40em 3em;
+		padding: 10px 30px 5px 15px;
 		border-radius: 6px;
 		font-weight: 700;
 		font-size: 1em;
+		width: 200px;
 		
 	}
 	
