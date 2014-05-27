@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by Free CSS Templates
 http://www.freecsstemplates.org
@@ -44,20 +44,6 @@ Released   : 20140404
 <script language="JavaScript" type="text/javascript">
 
 
-function verifyInput()
-{
-     if (!document.forms[0].elements[3].checked && !document.forms[0].elements[4].checked && !document.forms[0].elements[5].checked) 
-     {
-          alert('You need to choose the type of characters you want in your password');
-          return 0;
-     }
-     if(document.forms[0].elements[6].value=="")
-     {
-          alert('You must enter the desired length for your password');
-          return 0;
-     }
-}
-
 
 function getRandomNum(lbound, ubound)
 {
@@ -90,7 +76,52 @@ function getPassword(length, extraChars, firstWithyz, firstWithoutyz, firstZahle
           pass = pass + getRandomChar(latterWithyz, latterWithoutyz, latterZahlen, extraChars);
      }
      return pass;
+
 }
+
+
+function getErgebnis () {
+var Nato;
+Nato=document.myform.password.value;
+for(var i=0, length=Nato.length; i<length; i++){
+switch (Nato.charAt(i)) {
+  case "1":
+    document.write("one");
+    break;
+  case "2":
+    document.write("two");
+    break;
+  case "3":
+    document.write("three");
+    break;
+  case "4":
+    document.write("four"); 
+    break;
+  case "5":
+    document.write("five");
+    break;
+  case "6":
+    document.write("six");
+    break;
+  case "7":
+    document.write("seven");
+    break;
+  case "8":
+    document.write("eight");
+    break;
+  case "9":
+    document.write("nine");
+    break;
+  case "0":
+    document.write("zero");
+    break;
+  default:
+    document.write("bitte nochmal probieren");
+    break;
+}
+}
+}
+
 </script>
 
 
@@ -115,17 +146,21 @@ function getPassword(length, extraChars, firstWithyz, firstWithoutyz, firstZahle
 <p style="font:bold 8pt arial;">Passwort:   
 <input type=text name=password size=25>
 
+<p style="font:bold 8pt arial;">Ausgabe:   
+<input type=text name=ausgabe size=25>
+
 <br>
-<div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="verifyInput(); document.myform.password.value =
-getPassword(document.myform.passwordLength.value, document.myform.extraChars.value,
-document.myform.firstWithyz.checked, document.myform.firstWithoutyz.checked, document.myform.firstZahlen.checked,
-document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked);">generieren</div>
+<div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.password.value =
+getPassword(document.myform.passwordLength.value,  document.myform.extraChars.value, document.myform.firstWithyz.checked, document.myform.firstWithoutyz.checked, document.myform.firstZahlen.checked,
+document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked); ">generieren</div>
+
+<div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.ausgabe.value =
+getErgebnis()">TEST</div>
 </form>
-</div>
+</div>   
 </div>
 
-
-<div class="text">
+<div class="text"> 
 <div class="heading">
 BESCHREIBUNG
 </div>
