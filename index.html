@@ -357,7 +357,7 @@ switch (nato.charAt(i)) {
 }
 }
 var ausgabeformat = result.substr(0, result.length-2);
-document.getElementById('ausgabe').innerHTML = ausgabeformat;
+document.getElementById('ausgabe').innerHTML = 'Nato Ausgabe: <br>' + ausgabeformat;
 } 
 </script>
  
@@ -379,12 +379,12 @@ document.getElementById('ausgabe').innerHTML = ausgabeformat;
 <input type=text name=passwordLength size=3 value="8">  
 
 <p style="font:bold 8pt arial">Sonderzeichen:  
-<input type=text name=extraChars value="!#$%&'()*+,-./:;<=>?@[]_^~{}" size=20> 
+<input type=text name=extraChars value="!#$%&'()*+,-./:;<=>?@[]_~{}" size=20> 
 
 <p style="font:bold 8pt arial;">Passwort:   
 <input type=text name=password size=25>
 
-<div id="ausgabe"></div>
+<div id="ausgabe">Nato Ausgabe:</div>
 
 <br>
 <div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.password.value =
