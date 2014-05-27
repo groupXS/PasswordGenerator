@@ -76,58 +76,296 @@ function getPassword(length, extraChars, firstWithyz, firstWithoutyz, firstZahle
           pass = pass + getRandomChar(latterWithyz, latterWithoutyz, latterZahlen, extraChars);
      }
      return pass;
-
 }
 
 
-function getErgebnis () {
-var Nato;
-Nato=document.myform.password.value;
-for(var i=0, length=Nato.length; i<length; i++){
-switch (Nato.charAt(i)) {
+function getErgebnis (nato, result, ausgabe) {
+var nato;
+var result="";
+nato=document.myform.password.value;
+for(var i=0, length=nato.length; i<length; i++){
+switch (nato.charAt(i)) {
+    case "a":
+    result+="alfa, ";
+    break;
+  case "b":
+    result+="bravo, ";
+    break;
+  case "c":
+    result+="charlie, ";
+    break;
+  case "d":
+    result+="delta, ";
+    break;
+  case "e":
+    result+="echo, ";
+    break;
+  case "f":
+    result+="foxtrott, ";
+    break;
+  case "g":
+    result+="golf, ";
+    break;
+  case "h":
+    result+="hotel, ";
+    break;
+  case "i":
+    result+="india, ";
+    break;
+  case "j":
+    result+="juliett, ";
+    break;
+  case "k":
+    result+="kilo, ";
+    break;
+  case "l":
+    result+="lima, ";
+    break;
+  case "m":
+    result+="mike, ";
+    break;
+  case "n":
+    result+="november, ";
+    break;
+  case "o":
+    result+="oscar, ";
+    break;
+  case "p":
+    result+="papa, ";
+    break;
+  case "q":
+    result+="quebec, ";
+    break;
+  case "r":
+    result+="romeo, ";
+    break;
+  case "s":
+    result+="sierra, ";
+    break;
+  case "t":
+    result+="tango, ";
+    break;
+  case "u":
+    result+="uniform, ";
+    break;
+  case "v":
+    result+="victor, ";
+    break;
+  case "w":
+    result+="whiskey, ";
+    break;
+  case "x":
+    result+="xray, ";
+    break;
+  case "y":
+    result+="yankee, ";
+    break;
+  case "z":
+    result+="zulu, ";
+    break;
+  case "A":
+    result+="ALFA, ";
+    break;
+  case "B":
+    result+="BRAVO, ";
+    break;
+  case "C":
+    result+="CHARLIE, ";
+    break;
+  case "D":
+    result+="DELTA, ";
+    break;
+  case "E":
+    result+="ECHO, ";
+    break;
+  case "F":
+    result+="FOXTROT, ";
+    break;
+  case "G":
+    result+="GOLF, ";
+    break;
+  case "H":
+    result+="HOTEL, ";
+    break;
+  case "I":
+    result+="INDIA, ";
+    break;
+  case "J":
+    result+="JULIETT, ";
+    break;
+  case "K":
+    result+="KILO, ";
+    break;
+  case "L":
+    result+="LIMA, ";
+    break;
+  case "M":
+    result+="MIKE, ";
+    break;
+  case "N":
+    result+="NOVEMBER, ";
+    break;
+  case "O":
+    result+="OSCAR, ";
+    break;
+  case "P":
+    result+="PAPA, ";
+    break;
+  case "Q":
+    result+="QUEBEC, ";
+    break;
+  case "R":
+    result+="ROMEO, ";
+    break;
+  case "S":
+    result+="SIERRA, ";
+    break;
+  case "T":
+    result+="TANGO, ";
+    break;
+  case "U":
+    result+="UNIFORM, ";
+    break;
+  case "V":
+    result+="VICTOR, ";
+    break;
+  case "W":
+    result+="WHISKEY, ";
+    break;
+  case "X":
+    result+="XRAY, ";
+    break;
+  case "Y":
+    result+="YANKEE, ";
+    break;
+  case "Z":
+    result+="ZULU, ";
+    break;
   case "1":
-    document.write("one");
+    result+="One, ";
     break;
   case "2":
-    document.write("two");
+    result+="Two, ";
     break;
   case "3":
-    document.write("three");
+    result+="Three, ";
     break;
   case "4":
-    document.write("four"); 
+    result+="Four, ";
     break;
   case "5":
-    document.write("five");
+   result+="Five, ";
     break;
   case "6":
-    document.write("six");
+    result+="Six, ";
     break;
   case "7":
-    document.write("seven");
+    result+="Seven, ";
     break;
   case "8":
-    document.write("eight");
+    result+="Eight, ";
     break;
   case "9":
-    document.write("nine");
+   result+="Nine, ";
     break;
   case "0":
-    document.write("zero");
+    result+="Zero, ";
     break;
-  default:
-    document.write("bitte nochmal probieren");
+  case "!":
+    result+="exclamation mark, ";
     break;
+  case "#":
+    result+="number sign, ";
+    break;
+  case "$":
+    result+="dollar sign, ";
+    break;
+  case "%":
+    result+="percent sign, ";
+    break;
+  case "&":
+    result+="ampersand, ";
+    break;
+  case "'":
+    result+="apostrophe, ";
+    break;
+  case "(":
+    result+="left parenthesis, ";
+    break;
+  case ")":
+    result+="right parenthesis, ";
+    break;
+  case "*":
+    result+="asterisk, ";
+    break;
+  case "+":
+    result+="plus sign, ";
+    break;
+  case ",":
+    result+="comma, ";
+    break;
+  case "-":
+    result+="hyphen, ";
+    break;
+  case ".":
+    result+="period, ";
+    break;
+  case "/":
+    result+="slash, ";
+    break;
+  case ":":
+    result+="colon, ";
+    break;
+  case ";":
+    result+="semicolon, ";
+    break;
+  case "<":
+    result+="less-than sign, ";
+    break;
+  case "=":
+    result+="equals sign, ";
+    break;
+  case ">":
+    result+="greater-than sign, ";
+    break;
+  case "?":
+    result+="question mark, ";
+    break;
+  case "@":
+    result+="at sign, ";
+    break;
+  case "^":
+    result+="at sign, ";
+    break;
+  case "[":
+    result+="left square bracket, ";
+    break;
+  case "]":
+    result+="right square bracket, ";
+    break;
+  case "_":
+    result+="underscore, ";
+    break;
+  case "{":
+    result+="left curly brace, ";
+    break;
+  case "}":
+    result+="right curly brace, ";
+    break;
+  case "~":
+    result+="tilde operator, ";
 }
 }
-}
-
+var ausgabeformat = result.substr(0, result.length-2);
+document.getElementById('ausgabe').innerHTML = ausgabeformat;
+} 
 </script>
-
+ 
 
 
 
 <div class="generator">
+
 <div class="heading">Passwortgenerator</div><br>
 <form name="myform">
 <input type=hidden name=firstWithyz><input type=hidden name=firstWithoutyz><input type=hidden name=firstZahlen>
@@ -141,13 +379,12 @@ switch (Nato.charAt(i)) {
 <input type=text name=passwordLength size=3 value="8">  
 
 <p style="font:bold 8pt arial">Sonderzeichen:  
-<input type=text name=extraChars value="!#$%&'()*+,-./:;<=>?@[]\^_~{}" size=20> 
+<input type=text name=extraChars value="!#$%&'()*+,-./:;<=>?@[]_^~{}" size=20> 
 
 <p style="font:bold 8pt arial;">Passwort:   
 <input type=text name=password size=25>
 
-<p style="font:bold 8pt arial;">Ausgabe:   
-<input type=text name=ausgabe size=25>
+<div id="ausgabe"></div>
 
 <br>
 <div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.password.value =
@@ -155,13 +392,14 @@ getPassword(document.myform.passwordLength.value,  document.myform.extraChars.va
 document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked); ">generieren</div>
 
 <div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.ausgabe.value =
-getErgebnis()">TEST</div>
+getErgebnis()">Nato</div>
 </form>
+
 </div>   
 </div>
 
 <div class="text"> 
-<div class="heading">
+<div class="heading"> 
 BESCHREIBUNG
 </div>
 <div class="beschreibung_text">
