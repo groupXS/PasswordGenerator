@@ -44,7 +44,6 @@ Released   : 20140404
 <script language="JavaScript" type="text/javascript">
 
 
-
 function getRandomNum(lbound, ubound)
 {
      return (Math.floor(Math.random() * (ubound - lbound)) + lbound);
@@ -334,9 +333,6 @@ switch (nato.charAt(i)) {
   case "@":
     result+="at sign, ";
     break;
-  case "^":
-    result+="at sign, ";
-    break;
   case "[":
     result+="left square bracket, ";
     break;
@@ -371,8 +367,8 @@ document.getElementById('ausgabe').innerHTML = 'Nato Ausgabe: <br>' + ausgabefor
 <input type=hidden name=firstWithyz><input type=hidden name=firstWithoutyz><input type=hidden name=firstZahlen>
 
 <p style="font:bold 8pt arial;">
-<input type=checkbox checked name=latterWithyz>Mit YZ
-<input type=checkbox name=latterWithoutyz>Ohne YZ
+<input type=radio checked name=latterWithyz id="gender_Male">Mit YZ
+<input type=radio name=latterWithoutyz id="gender_Female">Ohne YZ
 <input type=checkbox checked name=latterZahlen>Zahlen
 
 <p style="font:bold 8pt arial">Passwortl&auml;nge:
@@ -381,18 +377,16 @@ document.getElementById('ausgabe').innerHTML = 'Nato Ausgabe: <br>' + ausgabefor
 <p style="font:bold 8pt arial">Sonderzeichen:  
 <input type=text name=extraChars value="!#$%&'()*+,-./:;<=>?@[]_~{}" size=20> 
 
-<p style="font:bold 8pt arial;">Passwort:   
-<input type=text name=password size=25>
+<p style="font:bold 8pt arial;">Passwort:    
+<input type=text name=password size=25 >
 
 <div id="ausgabe">Nato Ausgabe:</div>
 
-<br>
+<br> 
 <div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.password.value =
 getPassword(document.myform.passwordLength.value,  document.myform.extraChars.value, document.myform.firstWithyz.checked, document.myform.firstWithoutyz.checked, document.myform.firstZahlen.checked,
-document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked); ">generieren</div>
+document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked); getErgebnis()">generieren</div>
 
-<div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.ausgabe.value =
-getErgebnis()">Nato</div>
 </form>
 
 </div>   
