@@ -43,6 +43,11 @@ Released   : 20140404
 
 <script language="JavaScript" type="text/javascript">
 
+if(document.getElementById('gender_Male').checked) {
+  dockument.getElementById('gender_Female').unchecked
+}else if(document.getElementById('gender_Female').checked) {
+  dockument.getElementById('gender_Male').unchecked
+}
 
 function getRandomNum(lbound, ubound)
 {
@@ -353,8 +358,22 @@ switch (nato.charAt(i)) {
 }
 }
 var ausgabeformat = result.substr(0, result.length-2);
-document.getElementById('ausgabe').innerHTML = 'Nato Ausgabe: <br>' + ausgabeformat;
+document.getElementById('ausgabe').innerHTML = ausgabeformat;
 } 
+
+
+
+function getKomplett (passwortausgabe, natoausgabe, komplett) {
+var passwortausgabe;
+var natoausgabe;
+var komplett = "";
+passwortausgabe=document.myform.password.value;
+natoausgabe=document.getElementById('ausgabe').innerHTML;
+var komplett = passwortausgabe + "  (" + natoausgabe + ")"; 
+document.myform.complete.value = komplett;
+
+//alert(komplett);   
+}
 </script>
  
 
@@ -374,18 +393,23 @@ document.getElementById('ausgabe').innerHTML = 'Nato Ausgabe: <br>' + ausgabefor
 <p style="font:bold 8pt arial">Passwortl&auml;nge:
 <input type=text name=passwordLength size=3 value="8">  
 
+
 <p style="font:bold 8pt arial">Sonderzeichen:  
 <input type=text name=extraChars value="!#$%&'()*+,-./:;<=>?@[]_~{}" size=20> 
 
-<p style="font:bold 8pt arial;">Passwort:    
+<p style="font:bold 8pt arial; display:none;">Passwort:    
 <input type=text name=password size=25 >
 
-<div id="ausgabe">Nato Ausgabe:</div>
+<p style="font:bold 8pt arial;">Passwort:    
+<input type=text name=complete size=25 >
+
+<div id="ausgabe" style="display:none;">Nato Ausgabe:</div>
 
 <br> 
 <div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.password.value =
 getPassword(document.myform.passwordLength.value,  document.myform.extraChars.value, document.myform.firstWithyz.checked, document.myform.firstWithoutyz.checked, document.myform.firstZahlen.checked,
-document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked); getErgebnis()">generieren</div>
+document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked); getErgebnis(); getKomplett();">generieren</div>
+
 
 </form>
 
