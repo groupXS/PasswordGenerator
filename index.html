@@ -22,6 +22,29 @@ Released   : 20140404
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$('input[class^="class"]').click(function() {
+    var $this = $(this);
+    if ($this.is(".class1")) {
+        if ($(".class1:checked").length > 0) {
+            $(".class2").prop({ disabled: false, checked: false });
+        }
+    } 
+else if ($this.is(".class2")) {
+        if ($this.is(":checked")) {
+            $(".class2").not($this).prop({ disabled: false, checked: false });
+            $(".class1").prop("checked", false);
+        } else {
+            $(".class2").prop("disabled", false);
+        }
+    }
+});
+});
+</script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -43,11 +66,6 @@ Released   : 20140404
 
 <script language="JavaScript" type="text/javascript">
 
-if(document.getElementById('gender_Male').checked) {
-  dockument.getElementById('gender_Female').unchecked
-}else if(document.getElementById('gender_Female').checked) {
-  dockument.getElementById('gender_Male').unchecked
-}
 
 function getRandomNum(lbound, ubound)
 {
@@ -370,10 +388,31 @@ var komplett = "";
 passwortausgabe=document.myform.password.value;
 natoausgabe=document.getElementById('ausgabe').innerHTML;
 var komplett = passwortausgabe + "  (" + natoausgabe + ")"; 
-document.myform.complete.value = komplett;
-
-//alert(komplett);   
+document.myform.complete.value = komplett;  
 }
+
+function getKomplettzwei(passwortausgabe, natoausgabe, komplett){
+var passwortausgabe;
+var natoausgabe;
+var komplett = "";
+passwortausgabe=document.myform.password.value;
+natoausgabe=document.getElementById('ausgabe').innerHTML;
+var komplett = passwortausgabe + "  (" + natoausgabe + ")"; 
+document.myform.completetwo.value = komplett;  
+}
+
+function getKomplettdrei(passwortausgabe, natoausgabe, komplett){
+var passwortausgabe;
+var natoausgabe;
+var komplett = "";
+passwortausgabe=document.myform.password.value;
+natoausgabe=document.getElementById('ausgabe').innerHTML;
+var komplett = passwortausgabe + "  (" + natoausgabe + ")"; 
+document.myform.completethree.value = komplett;  
+}
+
+
+
 </script>
  
 
@@ -386,9 +425,19 @@ document.myform.complete.value = komplett;
 <input type=hidden name=firstWithyz><input type=hidden name=firstWithoutyz><input type=hidden name=firstZahlen>
 
 <p style="font:bold 8pt arial;">
-<input type=radio checked name=latterWithyz id="gender_Male">Mit YZ
-<input type=radio name=latterWithoutyz id="gender_Female">Ohne YZ
+<input type=checkbox checked name=latterWithyz id="mityz" class="class1">Mit YZ
+<input type=checkbox name=latterWithoutyz id="ohneyz" class="class2">Ohne YZ
 <input type=checkbox checked name=latterZahlen>Zahlen
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+</script>
 
 <p style="font:bold 8pt arial">Passwortl&auml;nge:
 <input type=text name=passwordLength size=3 value="8">  
@@ -400,15 +449,19 @@ document.myform.complete.value = komplett;
 <p style="font:bold 8pt arial; display:none;">Passwort:    
 <input type=text name=password size=25 >
 
-<p style="font:bold 8pt arial;">Passwort:    
+<p style="font:bold 8pt arial;">Passwort1:    
 <input type=text name=complete size=25 >
+<p style="font:bold 8pt arial;">Passwort2:    
+<input type=text name=completetwo size=25 >
+<p style="font:bold 8pt arial;">Passwort3:    
+<input type=text name=completethree size=25 >
 
 <div id="ausgabe" style="display:none;">Nato Ausgabe:</div>
 
 <br> 
 <div class="button" style="cursor:hand; background-color: #21559D; color: #ffffff; width: 80px; height: 30px; border-radius: 6px;" onClick="document.myform.password.value =
 getPassword(document.myform.passwordLength.value,  document.myform.extraChars.value, document.myform.firstWithyz.checked, document.myform.firstWithoutyz.checked, document.myform.firstZahlen.checked,
-document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked); getErgebnis(); getKomplett();">generieren</div>
+document.myform.latterWithyz.checked, document.myform.latterWithoutyz.checked, document.myform.latterZahlen.checked); getErgebnis(); getKomplett(); getKomplettzwei(); getKomplettdrei();">generieren</div>
 
 
 </form>
@@ -426,4 +479,4 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 </div>
 </div>
 </body>
-</html>
+</html> 
